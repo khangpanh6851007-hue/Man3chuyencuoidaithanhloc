@@ -1,276 +1,233 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chuyến Đò Chiều Chối - Thời Kỳ Cuối Màn 3</title>
-    <style>
-        :root {
-            --bg-primary: #050508;
-            --bg-secondary: #0b0c10;
-            --text-main: #e0e6ed;
-            --text-muted: #8a99ad;
-            --accent-gold: #ffd700;
-            --accent-cyan: #00f2fe;
-            --accent-red: #ff2a5f;
-            --border-glow: rgba(0, 242, 254, 0.2);
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080b16">
+<meta name="description" content="Chuyến Đò Chiều ULTRA 4.0 – hành trình, nhiệm vụ, kho báu và thành tích.">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<title>Chuyến Đò Chiều • ULTRA 4.0</title>
+<style>
+:root{color-scheme:dark;--bg:#080b16;--panel:rgba(18,25,45,.82);--panel2:#151e35;--line:rgba(149,185,255,.17);--txt:#eef4ff;--muted:#a6b4ce;--cyan:#55eaff;--gold:#ffd66e;--pink:#ff7095;--green:#7cf0bb;--shadow:0 20px 60px #0006}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;background:radial-gradient(ellipse at 10% 0%,#34205a66,transparent 36rem),radial-gradient(ellipse at 90% 18%,#006e8a35,transparent 34rem),var(--bg);color:var(--txt);font:15px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.wrap{width:min(1240px,calc(100% - 32px));margin:auto}.top{position:sticky;top:0;z-index:30;background:#080b16dc;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.05em}.logo{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;color:#071018;background:linear-gradient(135deg,var(--cyan),var(--gold));font-size:20px}.links{display:flex;gap:17px;align-items:center}.links a{font-size:13px;color:var(--muted)}.links a:hover{color:var(--cyan)}.navright{display:flex;gap:7px}.btn,.chip{border:1px solid var(--line);border-radius:12px;padding:9px 13px;background:#ffffff0b;color:var(--txt)}.btn:hover{border-color:#55eaff88;transform:translateY(-1px)}.primary{background:linear-gradient(110deg,var(--cyan),#a3f5d9);border:0;color:#071018;font-weight:850}.danger{border-color:#ff709566;color:#ff9db5}.hero{padding:62px 0 38px;text-align:center}.eyebrow{color:var(--cyan);font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:850}.hero h1{font-size:clamp(34px,6vw,68px);line-height:1.02;letter-spacing:-.045em;margin:13px 0;background:linear-gradient(110deg,#fff,var(--cyan),var(--gold));background-clip:text;color:transparent}.hero p{max-width:730px;margin:0 auto;color:var(--muted);font-size:17px}.hero-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px 0}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:24px}.stat,.panel,.card{background:var(--panel);border:1px solid var(--line);border-radius:19px;box-shadow:var(--shadow);backdrop-filter:blur(14px)}.stat{padding:13px}.stat small{color:var(--muted);display:block}.stat strong{font-size:23px;color:var(--gold)}main{padding-bottom:50px}.section{padding:36px 0}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:17px}.sectionhead h2{margin:3px 0;font-size:clamp(23px,3vw,32px)}.sectionhead p{margin:0;color:var(--muted);font-size:13px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{padding:20px;position:relative;overflow:hidden}.card .ico{font-size:28px}.card h3{margin:8px 0 4px}.muted{color:var(--muted)}.big{font-size:30px;font-weight:900;color:var(--cyan)}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.panel{padding:20px}.panel h3{margin:0 0 6px}.progress{height:9px;background:#ffffff14;border-radius:20px;overflow:hidden;margin:12px 0}.progress span{display:block;height:100%;background:linear-gradient(90deg,var(--cyan),var(--gold));width:0;transition:width .25s}.row{display:flex;align-items:center;justify-content:space-between;gap:12px}.quest,.item,.notice,.mapstep{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--line);border-radius:13px;background:#ffffff06;margin-top:9px}.quest>div:first-child,.item>div:first-child,.notice>div:first-child{flex:1}.quest small,.item small{display:block;color:var(--muted)}.quest button{white-space:nowrap}.quest button:disabled{opacity:.4;cursor:not-allowed}.badgegrid{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.badgeitem{padding:9px 11px;border:1px solid var(--line);border-radius:12px;background:#ffffff08;font-size:13px}.badgeitem.lock{opacity:.38;filter:grayscale(1)}.map{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:14px}.mapstep{display:block;text-align:center;padding:17px 8px}.mapstep b{display:block;font-size:26px}.mapstep small{display:block;color:var(--muted)}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:440px}td,th{text-align:left;padding:11px;border-bottom:1px solid var(--line)}th{font-size:12px;color:var(--cyan)}.field{width:100%;padding:11px 12px;border-radius:11px;border:1px solid var(--line);background:#ffffff09;color:var(--txt);margin:5px 0 12px}.field option{background:#151e35}.tabs{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}.tab.active{border-color:var(--cyan);color:var(--cyan);background:#55eaff12}.hidden{display:none!important}.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,20px);opacity:0;transition:.2s;z-index:90;background:#e8fbff;color:#071018;padding:11px 16px;border-radius:12px;font-weight:800;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}.modal{position:fixed;inset:0;z-index:70;background:#0009;display:grid;place-items:center;padding:18px}.modalbox{width:min(440px,100%);background:#111a2d;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}.modalbox h2{margin-top:0}.foot{text-align:center;border-top:1px solid var(--line);padding:25px;color:var(--muted);font-size:12px}.notice{align-items:flex-start}.notice.unread{border-color:#55eaff77}.small{font-size:12px}.rankline{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:12px}.mobilemenu{display:none}
+@media(max-width:850px){.links{display:none}.grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.wrap{width:calc(100% - 24px)}.nav{height:60px}.mobilemenu{display:inline-block}.section{padding:27px 0}.sectionhead{display:block}.grid,.two{grid-template-columns:1fr}.map{grid-template-columns:repeat(2,1fr)}.hero{padding:42px 0 24px}.hero p{font-size:15px}.card,.panel{padding:16px}.navright .btn{padding:8px 10px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
-        }
+.final-journey{position:relative;overflow:hidden;border:1px solid #ffd66e55;border-radius:24px;padding:clamp(20px,4vw,34px);background:radial-gradient(ellipse at 85% 0%,#8b5cf633,transparent 42%),linear-gradient(135deg,#171d35ee,#10172bea);box-shadow:0 24px 70px #0007}
+.final-journey:before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 35%,#55eaff08 50%,transparent 65%)}
+.final-journey-head{text-align:center;max-width:850px;margin:0 auto 22px;position:relative}
+.final-journey-head h2{font-size:clamp(27px,4vw,42px);margin:8px 0;background:linear-gradient(100deg,#fff,#ffd66e,#55eaff);background-clip:text;color:transparent}
+.final-journey-head p{color:var(--muted);font-size:16px;margin:0 auto;max-width:760px}
+.final-journey-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;position:relative}
+.final-journey-card{padding:19px;border:1px solid var(--line);border-radius:17px;background:#ffffff08}
+.final-journey-card .ico{font-size:30px}.final-journey-card h3{margin:8px 0 5px}.final-journey-card p{color:var(--muted);margin:0}
+.final-warning{position:relative;margin-top:14px;padding:17px 19px;border-radius:16px;border:1px solid #ffb45c88;background:linear-gradient(110deg,#8a4b172b,#ff709512)}
+.final-warning b{display:block;color:#ffd18a;margin-bottom:5px}.final-warning p{margin:0;color:#f4e6d3}
+@media(max-width:700px){.final-journey-grid{grid-template-columns:1fr}.final-journey{padding:18px}}
 
-        body {
-            background-color: var(--bg-primary);
-            color: var(--text-main);
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
+.countdown-panel{position:relative;margin:18px auto 0;max-width:920px;padding:clamp(18px,3vw,26px);border:1px solid #55eaff66;border-radius:20px;background:linear-gradient(120deg,#062a3a99,#211b4388);box-shadow:0 18px 55px #0006;text-align:center}
+.countdown-panel h3{margin:0 0 5px;font-size:clamp(19px,3vw,25px);color:#eafaff}
+.countdown-sub{margin:0 0 17px;color:var(--muted);font-size:12px}
+.countdown-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}
+.countdown-unit{padding:13px 6px;border:1px solid #ffffff1b;border-radius:14px;background:#07101dcc}
+.countdown-value{display:block;font-size:clamp(25px,5vw,42px);font-weight:950;line-height:1.1;letter-spacing:-.04em;color:var(--cyan);font-variant-numeric:tabular-nums}
+.countdown-label{display:block;margin-top:7px;color:var(--muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.countdown-note{margin:13px 0 0;color:#b9c8df;font-size:11px}
+@media(max-width:520px){.countdown-grid{gap:5px}.countdown-unit{padding:11px 3px}.countdown-label{font-size:9px;letter-spacing:0}.countdown-value{font-size:clamp(20px,6vw,30px)}}
 
-        /* Glassmorphism 5.0 Styling */
-        .glass-panel {
-            background: rgba(15, 18, 28, 0.65);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            border-radius: 16px;
-        }
-
-        /* Hero / Header Section */
-        header {
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2rem;
-            position: relative;
-            background: radial-gradient(circle at center, #1a0f2e 0%, #050508 70%);
-        }
-
-        .title-tag {
-            color: var(--accent-cyan);
-            letter-spacing: 4px;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        h1 {
-            font-size: clamp(2rem, 5vw, 4rem);
-            font-weight: 800;
-            background: linear-gradient(135deg, #fff 0%, var(--accent-cyan) 50%, var(--accent-gold) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 30px rgba(0,242,254,0.3);
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin-bottom: 2rem;
-        }
-
-        /* Countdown Grid */
-        .countdown-container {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 1rem;
-        }
-
-        .time-box {
-            padding: 1.2rem;
-            min-width: 90px;
-            text-align: center;
-            border-bottom: 3px solid var(--accent-cyan);
-        }
-
-        .time-num {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #fff;
-        }
-
-        .time-label {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-        }
-
-        /* Container & Cards Section */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 4rem 1.5rem;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 3rem;
-            color: var(--accent-gold);
-            letter-spacing: 1px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            padding: 2rem;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: var(--accent-cyan);
-        }
-
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.8rem;
-            color: #fff;
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* Warning Banner */
-        .alert-banner {
-            margin-top: 4rem;
-            padding: 2rem;
-            border-left: 4px solid var(--accent-red);
-            background: rgba(255, 42, 95, 0.05);
-        }
-
-        .alert-title {
-            color: var(--accent-red);
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 3rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-
-        /* Mobile Adjustments */
-        @media (max-width: 600px) {
-            .countdown-container {
-                gap: 0.5rem;
-            }
-            .time-box {
-                min-width: 65px;
-                padding: 0.8rem 0.4rem;
-            }
-            .time-num {
-                font-size: 1.4rem;
-            }
-        }
-    </style>
+</style>
 </head>
 <body>
+<div class="top"><div class="wrap nav">
+<a class="brand" href="#"><span class="logo">✦</span><span>CHUYẾN ĐÒ CHIỀU <small style="color:var(--cyan)">ULTRA 4.0</small></span></a>
+<nav class="links"><a href="#final-journey">Đò Chiều Chuyến Cuối</a><a href="#game">Trò chơi</a><a href="#treasure">Kho báu</a><a href="#journey">Hành trình</a><a href="#ranking">Xếp hạng</a><a href="#profile">Hồ sơ</a><a href="#admin">Admin</a></nav>
+<div class="navright"><button class="btn" id="langBtn">VI</button><button class="btn" id="loginBtn">Đăng nhập</button><button class="btn mobilemenu" id="menuBtn">☰</button></div>
+</div></div>
+<header class="hero wrap">
+<div class="eyebrow">✧ ĐẠI THANH LỌC • GAME & COMMUNITY PLATFORM</div>
+<h1>CHUYẾN ĐÒ CHIỀU<br>ULTRA 4.0</h1>
+<p>Hành trình tích cực – nhiệm vụ mỗi ngày – kho báu huyền thoại – thành tích và cộng đồng người chơi.</p>
+<div class="hero-actions"><a class="btn primary" href="#game">⚔️ Vào hành trình</a><a class="btn" href="#treasure">🎁 Khám phá kho báu</a></div>
+<div class="stats">
+<div class="stat"><small>⭐ Điểm thưởng</small><strong id="heroPoints">0</strong></div>
+<div class="stat"><small>👑 Danh hiệu</small><strong id="heroRank">Tân Binh</strong></div>
+<div class="stat"><small>🔥 Chuỗi ngày</small><strong id="heroStreak">1</strong></div>
+<div class="stat"><small>🏅 Huy hiệu</small><strong id="heroBadges">0/8</strong></div>
+</div>
+</header>
+<main class="wrap">
+<section class="section" id="final-journey">
+<div class="final-journey">
+  <div class="final-journey-head">
+    <div class="eyebrow">✧ THÔNG ĐIỆP CHUYẾN CUỐI</div>
+    <h2>🚢 Đò Chiều Chuyến Cuối</h2>
+    <p>Cơ hội cuối cùng để bước lên chuyến tàu năng lượng cao. Hãy buông bỏ những gánh nặng tham, sân,Si để nhẹ nhàng tiến về bến bờ giác ngộ.</p>
+  </div>
+  <div class="final-journey-grid">
+    <article class="final-journey-card"><div class="ico">⚡</div><h3>Đại Thanh Lọc Tâm Thức</h3><p>Giai đoạn gột rửa những tần số thấp, nghiệp lực cũ và tư duy tiêu cực. Nâng cao tần số rung động cá nhân qua thiền định và lòng biết ơn.</p></article>
+    <article class="final-journey-card"><div class="ico">🌟</div><h3>Chuyển Giao Màn 3</h3><p>Khép lại chu kỳ cũ, mở ra kỷ nguyên mới. Chỉ những tâm thức đủ tình thương, sự bao dung và minh triết mới có thể đồng điệu cùng bước tiến này.</p></article>
+    <article class="final-journey-card"><div class="ico">🕊️</div><h3>Trở Về Với Tâm An</h3><p>Quay vào bên trong, nuôi dưỡng lòng biết ơn, sự tỉnh thức và những hành động thiện lành trong đời sống mỗi ngày.</p></article>
+  </div>
+  <div class="final-warning"><b>⚠️ LỜI CẢNH TỈNH QUAN TRỌNG</b><p>Thời gian không còn nhiều. Hãy giữ vững tâm an, quay vào bên trong, thực hành lối sống thiện lành và lan tỏa tình yêu thương vô điều kiện.</p></div>
 
-    <!-- Header / Hero Section -->
-    <header>
-        <div class="title-tag">Giao Diện 5.0 • Đại Thanh Lọc</div>
-        <h1>THỜI KỲ CUỐI MÀN 3<br>ĐÒ CHIỀU CHUYẾN CUỐI</h1>
-        <p class="subtitle">Thức tỉnh tâm thức, chuyển dịch năng lượng và quay về chánh niệm trước giờ khắc chuyển giao kỷ nguyên mới.</p>
-        
-        <div class="countdown-container">
-            <div class="glass-panel time-box">
-                <div class="time-num" id="hours">00</div>
-                <div class="time-label">Giờ</div>
-            </div>
-            <div class="glass-panel time-box">
-                <div class="time-num" id="minutes">00</div>
-                <div class="time-label">Phút</div>
-            </div>
-            <div class="glass-panel time-box">
-                <div class="time-num" id="seconds">00</div>
-                <div class="time-label">Giây</div>
-            </div>
-        </div>
-    </header>
+  <div class="countdown-panel" aria-label="Đồng hồ đếm ngược 13 năm">
+    <h3>⏳ ĐỒNG HỒ ĐẾM NGƯỢC 13 NĂM</h3>
+    <p class="countdown-sub">Từng ngày, từng giờ, từng phút và từng giây của hành trình</p>
+    <div class="countdown-grid" role="timer" aria-live="off">
+      <div class="countdown-unit"><span class="countdown-value" id="cdYears">13</span><span class="countdown-label">Năm</span></div>
+      <div class="countdown-unit"><span class="countdown-value" id="cdDays">000</span><span class="countdown-label">Ngày</span></div>
+      <div class="countdown-unit"><span class="countdown-value" id="cdHours">00</span><span class="countdown-label">Giờ</span></div>
+      <div class="countdown-unit"><span class="countdown-value" id="cdMinutes">00</span><span class="countdown-label">Phút</span></div>
+      <div class="countdown-unit"><span class="countdown-value" id="cdSeconds">00</span><span class="countdown-label">Giây</span></div>
+    </div>
+    <p class="countdown-note">Mốc thời gian cài đặt: 23/11/2039 lúc 23:59:59 (giờ Việt Nam, UTC+7).</p>
+  </div>
 
-    <!-- Main Content Section -->
-    <main class="container">
-        <h2 class="section-title">Nội Dung Thức Tỉnh</h2>
+</div>
+</section>
 
-        <div class="grid">
-            <!-- Card 1 -->
-            <div class="glass-panel card">
-                <div class="card-icon">⛵</div>
-                <h3>Đò Chiều Chuyến Cuối</h3>
-                <p>Cơ hội cuối cùng để bước lên chuyến tàu năng lượng cao. Hãy buông bỏ những gánh nặng tham, sân,Si để nhẹ nhàng tiến về bến bờ giác ngộ.</p>
-            </div>
+<section class="section" id="game">
+<div class="sectionhead"><div><div class="eyebrow">PLAYER PROGRESSION</div><h2>⚔️ Trung tâm trò chơi</h2><p>Hoàn thành thử thách để tích điểm, thăng cấp và mở khóa danh hiệu.</p></div><span class="chip" id="connectionMode">● CHẾ ĐỘ DEMO</span></div>
+<div class="grid">
+<div class="card"><div class="ico">👑</div><h3 id="rankName">Tân Binh</h3><div class="big" id="rankPoints">0 XP</div><div class="progress"><span id="rankBar"></span></div><div class="rankline"><span id="rankCurrent">0 điểm</span><span id="rankNext">100 điểm kế tiếp</span></div></div>
+<div class="card"><div class="ico">💎</div><h3>Điểm thưởng</h3><div class="big" id="pointsValue">0</div><p class="muted small">Điểm demo dùng trong hồ sơ hiện tại. Máy chủ sẽ xác thực khi cấu hình backend.</p></div>
+<div class="card"><div class="ico">🛡️</div><h3>Danh hiệu & huy hiệu</h3><div class="badgegrid" id="badgeGrid"></div></div>
+</div>
+<div class="two" style="margin-top:14px">
+<div class="panel"><h3>📜 Nhiệm vụ hôm nay</h3><p class="muted small">Mỗi nhiệm vụ chỉ nhận thưởng một lần mỗi ngày.</p><div id="questList"></div></div>
+<div class="panel"><h3>📊 Thành tích mùa này</h3><div class="row"><span class="muted">Nhiệm vụ đã nhận</span><b id="questCount">0</b></div><div class="progress"><span id="questBar"></span></div><div class="row"><span class="muted">Số vật phẩm sở hữu</span><b id="inventoryCount">0</b></div><div class="row"><span class="muted">Số lần mở rương</span><b id="chestCount">0</b></div><div class="row"><span class="muted">Ngày tham gia</span><b id="joinedDate">Hôm nay</b></div><button class="btn" id="dailyCheckin" style="width:100%;margin-top:14px">🌞 Điểm danh nhận 5 điểm</button></div>
+</div>
+</section>
+<section class="section" id="treasure">
+<div class="sectionhead"><div><div class="eyebrow">MAGIC TREASURE VAULT</div><h2>🎁 Kho báu phép thuật</h2><p>Mở rương nhận vật phẩm ngẫu nhiên. Tất cả phần thưởng trong bản demo không có giá trị tiền tệ.</p></div></div>
+<div class="grid">
+<div class="card"><div class="ico">🪵</div><h3>Rương Khởi Đầu</h3><p class="muted">Chi phí: 20 điểm • Quà phổ thông và hiếm.</p><button class="btn primary openChest" data-chest="basic" style="width:100%;margin-top:12px">Mở rương</button></div>
+<div class="card"><div class="ico">💠</div><h3>Rương Huyền Bí</h3><p class="muted">Chi phí: 75 điểm • Cơ hội nhận cổ vật quý.</p><button class="btn primary openChest" data-chest="rare" style="width:100%;margin-top:12px">Mở rương</button></div>
+<div class="card"><div class="ico">👑</div><h3>Rương Thiên Giới</h3><p class="muted">Chi phí: 200 điểm • Vật phẩm huyền thoại.</p><button class="btn primary openChest" data-chest="legendary" style="width:100%;margin-top:12px">Mở rương</button></div>
+</div>
+<div class="two" style="margin-top:14px">
+<div class="panel"><h3>🎒 Túi đồ của tôi</h3><div id="inventoryList"><p class="muted">Chưa có vật phẩm. Hãy hoàn thành nhiệm vụ hoặc mở rương.</p></div></div>
+<div class="panel"><h3>📚 Nhật ký kho báu</h3><div id="treasureLog"><p class="muted">Chưa có hoạt động.</p></div></div>
+</div>
+</section>
+<section class="section" id="journey">
+<div class="sectionhead"><div><div class="eyebrow">MIND JOURNEY</div><h2>🗺️ Bản đồ hành trình</h2><p>Mở khóa các cột mốc bằng cách tích lũy điểm và hoàn thành nhiệm vụ.</p></div></div>
+<div class="panel"><div class="map">
+<div class="mapstep"><b>🌱</b><strong>Khởi Tâm</strong><small>0 XP • Đã mở</small></div>
+<div class="mapstep" id="map2"><b>🧘</b><strong>Tĩnh Tâm</strong><small>100 XP</small></div>
+<div class="mapstep" id="map3"><b>💛</b><strong>Biết Ơn</strong><small>250 XP</small></div>
+<div class="mapstep" id="map4"><b>🌟</b><strong>Lan Tỏa</strong><small>500 XP</small></div>
+<div class="mapstep" id="map5"><b>🏯</b><strong>Minh Triết</strong><small>1.000 XP</small></div>
+<div class="mapstep" id="map6"><b>👑</b><strong>Thiên Tôn</strong><small>1.500.000.000 XP</small></div>
+<div class="mapstep"><b>🌌</b><strong>Ngân Hà</strong><small>Sự kiện tương lai</small></div>
+<div class="mapstep"><b>✨</b><strong>Vô Cực</strong><small>Sự kiện tương lai</small></div>
+</div></div>
+</section>
+<section class="section" id="ranking">
+<div class="sectionhead"><div><div class="eyebrow">LEADERBOARD</div><h2>🏆 Bảng xếp hạng</h2><p>Bản demo hiển thị hồ sơ trên thiết bị. Bảng toàn cầu cần kết nối máy chủ.</p></div><span class="chip">LOCAL DEMO</span></div>
+<div class="panel tablewrap"><table><thead><tr><th>#</th><th>Người chơi</th><th>Danh hiệu</th><th>Điểm</th></tr></thead><tbody id="leaderboard"><tr><td>1</td><td>Bạn</td><td>Tân Binh</td><td>0</td></tr></tbody></table></div>
+</section>
+<section class="section" id="profile">
+<div class="sectionhead"><div><div class="eyebrow">PLAYER PROFILE</div><h2>👤 Hồ sơ người chơi</h2><p>Thông tin cá nhân được lưu trong trình duyệt của thiết bị.</p></div></div>
+<div class="two">
+<div class="panel"><h3>Thông tin hồ sơ</h3><label class="small muted" for="playerName">Tên hiển thị</label><input class="field" id="playerName" maxlength="32" placeholder="Nhập tên người chơi"><label class="small muted" for="playerBio">Lời giới thiệu</label><input class="field" id="playerBio" maxlength="120" placeholder="Một câu giới thiệu về bạn"><button class="btn primary" id="saveProfile">Lưu hồ sơ</button><p class="muted small" id="profileStatus"></p></div>
+<div class="panel"><h3>💾 Sao lưu dữ liệu</h3><p class="muted small">Xuất tiến trình, vật phẩm, điểm và hồ sơ ra tệp JSON. Khôi phục sẽ thay thế dữ liệu hiện tại.</p><button class="btn primary" id="exportBtn">⬇ Xuất bản sao lưu</button> <button class="btn" id="importBtn">⬆ Khôi phục</button><input type="file" id="importFile" accept=".json,application/json" hidden><p class="muted small" id="backupStatus"></p></div>
+</div>
+</section>
+<section class="section" id="notices">
+<div class="sectionhead"><div><div class="eyebrow">NOTIFICATION CENTER</div><h2>🔔 Trung tâm thông báo</h2><p>Thông báo nhiệm vụ, nhận thưởng và thay đổi tiến trình trên thiết bị.</p></div><button class="btn" id="clearNotices">Xóa thông báo</button></div>
+<div class="panel" id="noticeList"><p class="muted">Chưa có thông báo.</p></div>
+</section>
+<section class="section" id="admin">
+<div class="sectionhead"><div><div class="eyebrow">ADMIN CONSOLE</div><h2>🛡️ Quản trị hệ thống</h2><p>Chỉ là bảng điều khiển demo ở frontend, không có quyền quản trị máy chủ.</p></div><span class="chip">DEMO ONLY</span></div>
+<div class="panel"><div class="grid">
+<div class="card"><small class="muted">Điểm hồ sơ hiện tại</small><div class="big" id="adminPoints">0</div></div>
+<div class="card"><small class="muted">Vật phẩm trong túi</small><div class="big" id="adminItems">0</div></div>
+<div class="card"><small class="muted">Thông báo</small><div class="big" id="adminNotices">0</div></div>
+</div><p class="muted small" style="margin-top:14px">Quản trị thật cần xác thực phía máy chủ, phân quyền theo vai trò và nhật ký kiểm toán. Không nhập mật khẩu quản trị vào bản demo này.</p></div>
+</section>
+</main>
+<footer class="foot">© 2026 Chuyến Đò Chiều • ULTRA 4.0 • Game demo không quy đổi điểm/vật phẩm thành tiền.</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="modal hidden" id="authModal"><div class="modalbox"><div class="row"><h2 id="authTitle">Tài khoản</h2><button class="btn" id="closeAuth">✕</button></div><p class="muted small">Đăng nhập demo chỉ lưu hồ sơ trên thiết bị. Kết nối backend để dùng tài khoản trực tuyến an toàn.</p><label class="small muted">Tên người chơi</label><input class="field" id="authName" maxlength="32" placeholder="Tên hiển thị"><div class="row"><button class="btn primary" id="demoLogin">Tiếp tục ở chế độ demo</button><button class="btn" id="guestLogin">Dùng khách</button></div></div></div>
+<script>
+(()=>{"use strict";
+const $=id=>document.getElementById(id),today=()=>new Date().toLocaleDateString("en-CA"),KEY="cdc-ultra4-state-v1";
+const defaults={name:"Người chơi",bio:"",points:0,inventory:[],badges:[],claimed:{},claimedDay:today(),streak:1,lastDay:today(),chests:0,notices:[],joined:new Date().toISOString(),checkinDay:"",logs:[]};
+let s;try{s={...defaults,...JSON.parse(localStorage.getItem(KEY)||"{}")}}catch{s={...defaults}}
+if(s.claimedDay!==today()){s.claimed={};s.claimedDay=today()}
+if(s.lastDay!==today()){let y=new Date();y.setDate(y.getDate()-1);s.streak=s.lastDay===y.toLocaleDateString("en-CA")?s.streak+1:1;s.lastDay=today()}
+const ranks=[["Tân Binh",0],["Người Tĩnh Tâm",100],["Người Biết Ơn",250],["Người Lan Tỏa",500],["Bậc Minh Triết",1000],["Thiên Tôn",1500000000]];
+const badgeDefs=[["seed","🌱 Khởi đầu",()=>s.points>=10],["focus","🧘 Tĩnh tâm",()=>s.claimed.focus],["kind","💛 Tử tế",()=>s.claimed.kind],["journal","📖 Ghi chép",()=>s.claimed.journal],["chest","🎁 Thợ săn kho báu",()=>s.chests>=1],["rare","💠 Cổ vật hiếm",()=>s.inventory.some(x=>x.rarity!=="Phổ thông")],["streak","🔥 Bền bỉ",()=>s.streak>=7],["legend","👑 Huyền thoại",()=>s.points>=1000]];
+const quests=[["focus","🧘 Tĩnh tâm 5 phút","Hoàn thành một phiên tập trung",10],["kind","💛 Việc tử tế","Thực hiện một hành động tử tế",15],["journal","📖 Biết ơn","Ghi lại một điều biết ơn",15],["checklist","🌱 Checklist","Hoàn thành checklist hôm nay",20]];
+const loot=[{name:"Hạt giống bình an",rarity:"Phổ thông",icon:"🌱"},{name:"Đá Tĩnh Tâm",rarity:"Phổ thông",icon:"💎"},{name:"Hoa Sen Ánh Sáng",rarity:"Hiếm",icon:"🪷"},{name:"Ngọc Minh Triết",rarity:"Hiếm",icon:"🔮"},{name:"Vương Miện Thiên Giới",rarity:"Huyền thoại",icon:"👑"}];
+function save(){try{localStorage.setItem(KEY,JSON.stringify(s))}catch{toast("Không thể lưu dữ liệu trình duyệt")}}
+function rank(){return [...ranks].reverse().find(r=>s.points>=r[1])}
+function esc(v){return String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function toast(msg){$("toast").textContent=msg;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),2300)}
+function notice(msg){s.notices.unshift({msg,time:new Date().toLocaleString(),read:false});s.notices=s.notices.slice(0,30);save()}
+function achievements(){badgeDefs.forEach(b=>{if(b[2]()&&!s.badges.includes(b[0])){s.badges.push(b[0]);notice("Đã mở khóa huy hiệu: "+b[1]);}})}
+function render(){
+ achievements();let r=rank(),next=ranks.find(x=>x[1]>s.points);$("heroPoints").textContent=s.points.toLocaleString("vi-VN");$("heroRank").textContent=r[0];$("heroStreak").textContent=s.streak;$("heroBadges").textContent=s.badges.length+"/8";
+ $("rankName").textContent=r[0];$("rankPoints").textContent=s.points.toLocaleString("vi-VN")+" XP";$("pointsValue").textContent=s.points.toLocaleString("vi-VN");$("rankCurrent").textContent=r[1].toLocaleString("vi-VN")+" điểm";$("rankNext").textContent=next?(next[1]-s.points).toLocaleString("vi-VN")+" điểm kế tiếp":"Cấp cao nhất";$("rankBar").style.width=next?Math.min(100,(s.points-r[1])/(next[1]-r[1])*100)+"%":"100%";
+ $("badgeGrid").innerHTML=badgeDefs.map(b=>`<span class="badgeitem ${s.badges.includes(b[0])?"":"lock"}">${b[1]}</span>`).join("");
+ $("questList").innerHTML=quests.map(q=>`<div class="quest"><div><b>${q[1]}</b><small>${q[2]} • +${q[3]} điểm</small></div><button class="btn ${s.claimed[q[0]]?"":"primary"}" data-claim="${q[0]}" ${s.claimed[q[0]]?"disabled":""}>${s.claimed[q[0]]?"✓ Đã nhận":"Nhận thưởng"}</button></div>`).join("");
+ $("questList").querySelectorAll("[data-claim]").forEach(b=>b.onclick=()=>claim(b.dataset.claim));
+ let done=Object.values(s.claimed).filter(Boolean).length;$("questCount").textContent=done+"/4";$("questBar").style.width=(done/4*100)+"%";$("inventoryCount").textContent=s.inventory.length;$("chestCount").textContent=s.chests;$("joinedDate").textContent=new Date(s.joined).toLocaleDateString("vi-VN");
+ $("inventoryList").innerHTML=s.inventory.length?s.inventory.slice(-12).reverse().map(i=>`<div class="item"><span style="font-size:24px">${i.icon}</span><div><b>${esc(i.name)}</b><small>${esc(i.rarity)}</small></div></div>`).join(""):'<p class="muted">Chưa có vật phẩm.</p>';
+ $("treasureLog").innerHTML=s.logs.length?s.logs.slice(-6).reverse().map(x=>`<div class="item"><div><b>${esc(x.text)}</b><small>${esc(x.time)}</small></div></div>`).join(""):'<p class="muted">Chưa có hoạt động.</p>';
+ $("leaderboard").innerHTML=`<tr><td>1</td><td>${esc(s.name)} (Bạn)</td><td>${esc(r[0])}</td><td>${s.points.toLocaleString("vi-VN")}</td></tr>`;
+ $("playerName").value=s.name;$("playerBio").value=s.bio;
+ $("adminPoints").textContent=s.points;$("adminItems").textContent=s.inventory.length;$("adminNotices").textContent=s.notices.length;
+ $("noticeList").innerHTML=s.notices.length?s.notices.map(n=>`<div class="notice ${n.read?"":"unread"}"><div>🔔</div><div><b>${esc(n.msg)}</b><small class="muted">${esc(n.time)}</small></div></div>`).join(""):'<p class="muted">Chưa có thông báo.</p>';
+ for(let [id,min] of [["map2",100],["map3",250],["map4",500],["map5",1000],["map6",1500000000]])$(id).style.opacity=s.points>=min?"1":".35";
+ $("dailyCheckin").disabled=s.checkinDay===today();$("dailyCheckin").textContent=s.checkinDay===today()?"✓ Đã điểm danh hôm nay":"🌞 Điểm danh nhận 5 điểm";
+ save();
+}
+function claim(id){let q=quests.find(x=>x[0]===id);if(!q||s.claimed[id])return;s.claimed[id]=true;s.points+=q[3];notice("Bạn đã nhận "+q[3]+" điểm từ nhiệm vụ: "+q[1]);render();toast("Hoàn thành nhiệm vụ! +"+q[3]+" điểm")}
+$("dailyCheckin").onclick=()=>{if(s.checkinDay===today())return;s.checkinDay=today();s.points+=5;notice("Điểm danh thành công: +5 điểm");render();toast("+5 điểm điểm danh")};
+document.querySelectorAll(".openChest").forEach(b=>b.onclick=()=>{
+ const type=b.dataset.chest,cost={basic:20,rare:75,legendary:200}[type];if(s.points<cost){toast("Bạn chưa đủ điểm để mở rương");return}
+ if(!confirm("Dùng "+cost+" điểm để mở rương?"))return;
+ let pool=type==="basic"?loot.slice(0,3):type==="rare"?loot.slice(1,4):loot.slice(2);
+ let item=pool[Math.floor(Math.random()*pool.length)];s.points-=cost;s.chests++;s.inventory.push(item);s.logs.push({text:"Nhận "+item.name+" ("+item.rarity+")",time:new Date().toLocaleString()});notice("Kho báu: bạn nhận được "+item.name);render();toast("🎁 Nhận được "+item.icon+" "+item.name);
+});
+$("saveProfile").onclick=()=>{s.name=$("playerName").value.trim().slice(0,32)||"Người chơi";s.bio=$("playerBio").value.trim().slice(0,120);save();render();$("profileStatus").textContent="Đã lưu hồ sơ.";toast("Đã lưu hồ sơ")};
+$("exportBtn").onclick=()=>{let blob=new Blob([JSON.stringify({app:"cdc-ultra4",version:1,state:s},null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="chuyen-do-chieu-ultra4-backup.json";a.click();URL.revokeObjectURL(url);$("backupStatus").textContent="Đã tạo bản sao lưu."};
+$("importBtn").onclick=()=>$("importFile").click();
+$("importFile").onchange=async e=>{let f=e.target.files[0];if(!f)return;try{let d=JSON.parse(await f.text());if(d.app!=="cdc-ultra4"||!d.state||typeof d.state.points!=="number")throw 0;if(!confirm("Khôi phục sẽ thay thế dữ liệu hiện tại. Tiếp tục?"))return;s={...defaults,...d.state};save();render();$("backupStatus").textContent="Khôi phục thành công."}catch{$("backupStatus").textContent="Tệp sao lưu không hợp lệ."}e.target.value=""};
+$("clearNotices").onclick=()=>{s.notices=[];render();toast("Đã xóa thông báo")};
+$("loginBtn").onclick=()=>$("authModal").classList.remove("hidden");$("closeAuth").onclick=()=>$("authModal").classList.add("hidden");
+$("demoLogin").onclick=()=>{s.name=$("authName").value.trim()||s.name;save();render();$("authModal").classList.add("hidden");toast("Đã vào chế độ demo")};
+$("guestLogin").onclick=()=>$("authModal").classList.add("hidden");
+$("menuBtn").onclick=()=>toast("Dùng các liên kết điều hướng trên màn hình lớn hoặc cuộn trang để xem mục");
+$("langBtn").onclick=()=>toast("Giao diện hiện tại: Tiếng Việt • Bản English mở rộng ở giai đoạn tiếp theo");
+if(!s.notices.length)notice("Chào mừng bạn đến với Chuyến Đò Chiều ULTRA 4.0!");
+render();
 
-            <!-- Card 2 -->
-            <div class="glass-panel card">
-                <div class="card-icon">⚡</div>
-                <h3>Đại Thanh Lọc Tâm Thức</h3>
-                <p>Giai đoạn gột rửa những tần số thấp, nghiệp lực cũ và tư duy tiêu cực. Nâng cao tần số rung động cá nhân qua thiền định và lòng biết ơn.</p>
-            </div>
+// Đồng hồ 13 năm: mốc cố định theo giờ Việt Nam, cập nhật mỗi giây.
+const countdownTarget = new Date("2039-11-23T23:59:59+07:00").getTime();
+function updateThirteenYearCountdown(){
+  const remaining = Math.max(0, countdownTarget - Date.now());
+  const totalSeconds = Math.floor(remaining / 1000);
+  const years = Math.floor(totalSeconds / 31557600);
+  const days = Math.floor((totalSeconds % 31557600) / 86400);
+  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+  $("cdYears").textContent = String(years).padStart(2,"0");
+  $("cdDays").textContent = String(days).padStart(3,"0");
+  $("cdHours").textContent = String(hours).padStart(2,"0");
+  $("cdMinutes").textContent = String(minutes).padStart(2,"0");
+  $("cdSeconds").textContent = String(seconds).padStart(2,"0");
+  if(remaining <= 0) $("cdSeconds").textContent = "00";
+}
+updateThirteenYearCountdown();
+setInterval(updateThirteenYearCountdown, 1000);
 
-            <!-- Card 3 -->
-            <div class="glass-panel card">
-                <div class="card-icon">🌟</div>
-                <h3>Chuyển Giao Màn 3</h3>
-                <p>Khép lại chu kỳ cũ, mở ra kỷ nguyên mới. Chỉ những tâm thức đủ tình thương, sự bao dung và minh triết mới có thể đồng điệu cùng bước tiến này.</p>
-            </div>
-        </div>
-
-        <!-- Alert Banner -->
-        <div class="glass-panel alert-banner">
-            <div class="alert-title">⚠️ LỜI CẢNH TỈNH QUAN TRỌNG</div>
-            <p>Thời gian không còn nhiều. Hãy giữ vững tâm an, quay vào bên trong, thực hành lối sống thiện lành và lan tỏa tình yêu thương vô điều kiện.</p>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Chuyến Đò Chiều - Thời Kỳ Cuối Màn 3. Thiết kế tối ưu Bản Quyền KhangPanh68.</p>
-    </footer>
-
-    <!-- Simple Script for Dynamic Effects -->
-    <script>
-        // Đồng hồ đếm ngược tuần hoàn minh họa
-        function updateTimer() {
-            const now = new Date();
-            const hours = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 - now.getHours();
-            const minutes = 59 - now.getMinutes();
-            const seconds = 59 - now.getSeconds();
-
-            document.getElementById('hours').innerText = hours < 10 ? '0' + hours : hours;
-            document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
-            document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
-        }
-        setInterval(updateTimer, 1000);
-        updateTimer();
-    </script>
-</body>
-</html>
+if("serviceWorker" in navigator && (location.protocol==="https:"||location.hostname==="localhost"))addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+})();
+</script>
+</body></html>

@@ -1,27 +1,68 @@
-# ⛵ Chuyến Đò Chiều Chối - Thời Kỳ Cuối Màn 3 (Đại Thanh Lọc) 🌌
+# Chuyến Đò Chiều ULTRA 4.0 — Đò Chiều Chuyến Cuối
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![UI/UX 5.0](https://img.shields.io/badge/UI/UX-Interface_5.0-00f2fe?style=for-the-badge)
-![Year](https://img.shields.io/badge/Year-2026-ffd700?style=for-the-badge)
+Phiên bản triển khai GitHub 2026, cập nhật thêm đồng hồ đếm ngược 13 năm.
 
-Website giao diện **5.0 Dark Glassmorphism** mang thông điệp thức tỉnh tâm thức, chuyển dịch năng lượng và chuẩn bị cho giai đoạn chuyển giao kỷ nguyên mới trong **Thời Kỳ Cuối Màn 3 - Đại Thanh Lọc**.
+## Nội dung nổi bật
 
----
+- Giao diện ULTRA 4.0 tương thích máy tính và điện thoại.
+- Khu vực **Đò Chiều Chuyến Cuối** với thông điệp Đại Thanh Lọc Tâm Thức và Chuyển Giao Màn 3.
+- Đồng hồ đếm ngược hiển thị năm, ngày, giờ, phút và giây; tự cập nhật mỗi giây.
+- Mốc thời gian được cấu hình trong HTML: **23/11/2039 23:59:59 (UTC+7)**.
+- Trò chơi, nhiệm vụ, điểm thưởng, kho báu, hồ sơ và các phần demo có sẵn trong giao diện.
+- PWA: manifest và service worker (cần kiểm tra cài đặt/HTTPS sau khi triển khai).
 
-## 🌟 Tính Năng Nổi Bật (Interface 5.0)
+## Cấu trúc dự án
 
-- 🎨 **Thiết kế Glassmorphic 5.0 Modern:** Hiệu ứng kính mờ (blur effect) kết hợp màu nền tối mang lại cảm giác huyền ảo, chiều sâu không gian.
-- ⏱️ **Đồng hồ đếm ngược sinh động:** Hiển thị thời gian thực đếm ngược linh hoạt.
-- 📱 **Tương thích hoàn hảo (Fully Responsive):** Hiển thị mượt mà trên mọi thiết bị từ điện thoại di động đến máy tính màn hình rộng.
-- ⚡ **Tối ưu hóa cực nhẹ:** Mã nguồn gọn gàng, chạy mượt trên các trình biên dịch di động như **Acode**, **TrebEdit**.
+```text
+.
+├── public/
+│   ├── index.html
+│   ├── manifest.webmanifest
+│   ├── icon.svg
+│   └── sw.js
+├── server/
+│   └── server.js
+├── .github/workflows/deploy.yml
+├── package.json
+├── .env.example
+└── README.md
+```
 
----
+## Triển khai giao diện lên GitHub Pages
 
-## 📂 Cấu Trúc Dự Án
+1. Tạo repository GitHub mới hoặc mở repository dự án.
+2. Tải toàn bộ nội dung thư mục này lên repository.
+3. Vào **Settings → Pages** và chọn **GitHub Actions** làm Build and deployment source.
+4. Đảm bảo workflow `.github/workflows/deploy.yml` được commit.
+5. Push lên nhánh `main` (hoặc chạy workflow thủ công trong tab Actions).
+6. Mở URL GitHub Pages hiển thị trong phần Pages/Actions.
 
-```micro
-📁 thoi-ky-cuoi-man-3
- ├── 📄 index.html      # Mã nguồn chính (HTML, CSS, JS)
- └── 📄 README.md        # Tài liệu hướng dẫn dự án
+Workflow triển khai thư mục `public/` lên GitHub Pages. Nó chỉ triển khai giao diện tĩnh; GitHub Pages **không chạy** máy chủ Express/SQLite.
+
+## Chạy backend API riêng (tùy chọn)
+
+Yêu cầu Node.js 20 trở lên.
+
+```bash
+npm install
+cp .env.example .env
+npm start
+```
+
+Cấu hình các biến môi trường bí mật trong `.env` hoặc trong hosting backend. Không commit `.env`, JWT secret hay thông tin nhạy cảm lên GitHub.
+
+> Backend API trong thư mục `server/` là starter riêng. Giao diện hiện tại vẫn chạy chế độ demo trên trình duyệt và chưa tự động kết nối API; muốn dùng tài khoản thật, dữ liệu đồng bộ và bảng xếp hạng toàn cầu cần triển khai backend, cấu hình bảo mật và tích hợp API.
+
+## Tùy chỉnh thời hạn đếm ngược
+
+Trong `public/index.html`, tìm dòng:
+
+```js
+const countdownTarget = new Date("2039-11-23T23:59:59+07:00").getTime();
+```
+
+Thay ngày/giờ theo định dạng ISO 8601 có múi giờ. Đồng hồ hiển thị thời gian còn lại đến mốc đã cấu hình; đây là bộ đếm thời gian của ứng dụng, không phải dự báo hay thông báo về một sự kiện có thật.
+
+## Bảo toàn phiên bản
+
+Gói này là bản phát hành mới có hậu tố `countdown13`. Không ghi đè các file ULTRA 4.0, bản Chuyến Cuối hoặc các bản cũ đã tạo trước đó.
